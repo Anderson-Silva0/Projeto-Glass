@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Javascript</title>
+
+    <style>
+
+        body{
+            background-color: rgb(221, 82, 82);
+        }
+
+        div#corpo{
+            width: 900px;
+            height: 800px;
+            margin: auto;
+            border: 2px solid black;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+            background-color: yellowgreen;
+        }
+
+        img#luz{
+            margin: auto;
+            display: block;
+            box-shadow: 2px 3px 2px 2px rgb(252, 19, 19);
+            border-radius: 100%;
+        }
+
+        h1#titulo{
+            text-align: center;
+            border: 3px dashed black;
+            width: 19%;
+        
+            margin: 100px auto 100px auto;
+            
+        }
+
+        span#aa{
+            color: red;
+        }
+
+        span#bb{
+            color: black;
+        }
+
+        span#cc{
+            color: yellow;
+        }
+
+    </style>
+
+    <script>
+
+        function acendeLampada(){
+            document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+        }
+
+        function apagaLampada(){
+            document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+        }
+
+        function quebrarLampada(){
+            document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="corpo">
+<h1 id="titulo"><span id="aa">Acenda</span> <span id="bb">a</span> <span id="cc">lâmpada</span></h1>
+
+<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebrarLampada()"/>
+</div>
+</body>
+</html>
